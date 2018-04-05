@@ -1,6 +1,6 @@
 import random
 #8-ball for Mayumi. Ask it questions and it gives random answers.
-elif "8ball" in mesg ():
+if "8ball" in mesg ():
   num = random.randint(0, 26)
   if(num==0):
     print("No way!")
