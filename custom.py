@@ -31,10 +31,10 @@ class Cookie: #fortune cookies
       English = null
     
   def fileToArr():
-      arrList = []
-      with open('fortunecookies.txt') as file:
-          arrList.append(Cookie(file.readline())
-      return arrList
+    arrList = []
+    with open('fortunecookies.txt') as file:
+      arrList.append(Cookie(file.readline()))
+    return arrList
 
 class Pun: #puns
   Phrase = ""
