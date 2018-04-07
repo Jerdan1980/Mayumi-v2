@@ -40,9 +40,14 @@ async def on_message(message):
         await client.send_message(message.channel, 'something\'s wrong here')
     elif ("should" in msg and "?" in msg) or ("8ball" in msg):
       #trover helped me with the next line!
-      o = (lambda x:{None:x[0]}[random.shuffle(x)])(open("Resources\MayumiYesNo.txt", "r").read().split("\n"))
+      o = (lambda x:{None:x[0]}[random.shuffle(x)])(open("Resources\8ball.txt", "r").read().split("\n"))
       await client.send_message(message.channel, o)
-      
+    elif "puns" in msg:
+      keyword = msg.split("`")[1]
+      #trover stole the fun again
+      o =random.choice([x.split("|")[0] for x in open("puns.txt").read().split("\n") if keyword in x.split("|")[1].split()])
+      await client.send_message(message.channel, o)
+    
     #Anissa's code
     elif "writing prompts" in msg():
       if"random" in msg:

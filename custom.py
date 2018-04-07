@@ -3,12 +3,27 @@ def parseBool(str): #string to variable
     if str.lower() in ('true', 'yes', '1', 't', 'y'):
         return True
     elif str.lower() in ('false', 'no', '0', 'f', 'n'):
-        return False 
+        return False
     else:
         raise Exception('Boolean value expected')
 
 def changeBase(num, origin, out):
     return True
+
+def puns(str): #puns
+  arrList = []
+  punList = []
+  keywordList = []
+  with open('Resources\Text\puns.txt') as file:
+      tempList = []
+      tempList.append(file.readLine).split("|")
+      punList.append(tempList[0])
+      keywordList.append(tempList[1])
+      tempList.clear
+  for(i = 0, i < keywordList.len, i++):
+      if str in kewordList[i]:
+          arrList.append(punList[i])
+  return arrList
 
 #file-object classes
 class Cookie: #fortune cookies
@@ -29,19 +44,11 @@ class Cookie: #fortune cookies
     elif (Learn == false):
       Chinese = null
       English = null
-    
+
   def fileToArr():
     arrList = []
-    with open('fortunecookies.txt') as file:
+    with open('Resources\Text\fortunes.txt') as file:
       arrList.append(Cookie(file.readline()))
     return arrList
 
-class Pun: #puns
-  Phrase = ""
-  Keywords = []
-  def __init__(self, raw):
-    #TODO
-  def fileToArr():
-    #TODO
-    
 #writing prompts
